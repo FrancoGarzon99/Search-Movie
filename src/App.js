@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import Buscador from './Components/Buscador/Buscador';
+import Favoritos from './Components/Favoritos/Favoritos';
+import MovieDetail from './Components/MovieDetail/MovieDetail';
+import RenderMovies from './Components/RenderMovies/RenderMovies';
+import { Route } from 'react-router-dom';
 
+//Componete App
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	//Render
+	return (
+		<>
+			{/* Generamos las rutas de nuestra app */}
+			<NavBar />
+			<Route exact path="/" component={Buscador} />
+			<Route exact path="/" component={RenderMovies} />
+			<Route path="/Favs" component={Favoritos} />
+			<Route path="/movieDetail/:id" component={MovieDetail} />
+		</>
+	);
 }
 
 export default App;
