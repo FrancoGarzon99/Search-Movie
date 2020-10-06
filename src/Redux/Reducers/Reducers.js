@@ -26,7 +26,7 @@ const Reducers = (state = initialState, action) => {
 			return {
 				...state,
 				peliculasFavoritas: state.peliculasFavoritas.filter(
-					(item) => item.title !== action.payload.title
+					(item) => item.id !== action.id
 				),
 			};
 		default:

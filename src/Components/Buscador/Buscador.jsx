@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchApi } from '../../Actions/Actions';
+import { fetchApi } from '../../Redux/Actions/Actions';
 
 //Componente Buscador de peliculas( dispatch a Api )
 const Buscador = () => {
